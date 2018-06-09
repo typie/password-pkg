@@ -1,4 +1,4 @@
-const {AbstractTypiePackage, Typie, TypieRowItem} = require("typie-sdk");
+const {AbstractTypiePackage, TypieCore, TypieRowItem} = require("typie-sdk");
 const {clipboard} = require("electron");
 const Path = require("path");
 
@@ -8,7 +8,7 @@ class SubPasswordGenerate extends AbstractTypiePackage {
         super(win, config, pkgPath);
         this.packageName = "Password";
         this.db = "Password";
-        this.typie = new Typie(this.packageName, "Password");
+        this.typie = new TypieCore(this.packageName, "Password");
         this.icon = Path.join(this.getPackagePath(), "icons", "generate-pass.svg");
         this.availabelChars = config.availabelChars;
         this.numOfChars = config.numOfChars;

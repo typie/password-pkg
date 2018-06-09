@@ -1,4 +1,4 @@
-const {AbstractTypiePackage, Typie, TypieRowItem} = require("typie-sdk");
+const {AbstractTypiePackage, TypieCore, TypieRowItem} = require("typie-sdk");
 const {clipboard} = require("electron");
 const Path = require("path");
 const crypto = require('crypto');
@@ -9,7 +9,7 @@ class SubPasswordAdd extends AbstractTypiePackage {
         super(win, config, pkgPath);
         this.packageName = "Password";
         this.db = "Password";
-        this.typie = new Typie(this.packageName, "Password");
+        this.typie = new TypieCore(this.packageName, "Password");
         this.icon = parent.icon;
         this.addKeyIcon = Path.join(this.getPackagePath(), "icons", "add-key.svg");
         this.infoIcon = Path.join(this.getPackagePath(), "icons", "forgot-pass.svg");

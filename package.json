@@ -1,6 +1,6 @@
 {
   "name": "password-pkg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Saves & manage your passwords",
   "keywords": [
     "typie",
@@ -15,7 +15,7 @@
   "author": "Rotem Grimberg <rotemgrim@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "typie-sdk": "^1.0.9"
+    "typie-sdk": "^1.0.10"
   },
   "repository": {
     "type": "git",

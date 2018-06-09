@@ -11,8 +11,8 @@ class Password extends AbstractTypiePackage {
         super(win, config, pkgPath);
         this.win         = win;
         this.packages = {
-            Generate: new SubPasswordGenerate(win, config, "Password->Generate", this),
-            Add: new SubPasswordAdd(win, config, "Password->Add", this),
+            Generate: new SubPasswordGenerate(win, config.generate, "Password->Generate", this),
+            Add: new SubPasswordAdd(win, config.add, "Password->Add", this),
         };
         this.packageName = 'Password';
         this.algorithm = "aes-256-ctr";
